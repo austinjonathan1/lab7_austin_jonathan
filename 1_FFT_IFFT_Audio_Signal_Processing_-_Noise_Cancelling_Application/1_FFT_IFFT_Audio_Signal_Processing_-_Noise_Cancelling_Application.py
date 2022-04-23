@@ -72,7 +72,7 @@ b, a = signal.butter(5, 0.1)
 z2, _ = signal.lfilter(b, a, z, zi = zi * z[0])
 z3, _ = signal.lfilter(b, a, z, zi = zi * z[0])
 z4, _ = signal.lfilter(b, a, z, zi = zi * z[0])
-y = .filtfilt(b, a, sig)
+y = signal.filtfilt(b, a, sig)
 
 plt.figure
 plt.plot(t, sig, 'blue', alpha = 0.75)
